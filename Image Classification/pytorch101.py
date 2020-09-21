@@ -164,10 +164,10 @@ def slice_indexing_practice(x):
   """
   assert x.shape[0] >= 3
   assert x.shape[1] >= 5
-  last_row = None
-  third_col = None
-  first_two_rows_three_cols = None
-  even_rows_odd_cols = None
+  last_row = x[x.shape[0] - 1 , :]
+  third_col = x[:,2:3]
+  first_two_rows_three_cols = x[:2,:3]
+  even_rows_odd_cols = x[::2,::1]
   #############################################################################
   #                    TODO: Implement this function                          #
   #############################################################################
