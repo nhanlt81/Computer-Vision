@@ -350,7 +350,12 @@ def make_one_hot(x):
        In other words, if x[n] = c then y[n, c] = 1; all other elements of y are
        zeros. The dtype of y should be torch.float32.
   """
-  y = None
+  x = torch.tensor(x)
+  C = torch.max(x) + 1
+  n = x.shape[0]
+  y = torch.zeros(n,C)
+  for i in range(n) :
+    y[i,x[i]] = 1
   #############################################################################
   #                    TODO: Implement this function                          #
   #############################################################################
