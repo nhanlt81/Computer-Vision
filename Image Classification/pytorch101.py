@@ -167,12 +167,11 @@ def slice_indexing_practice(x):
   last_row = x[x.shape[0] - 1 , :]
   third_col = x[:,2:3]
   first_two_rows_three_cols = x[:2,:3]
-  even_rows_odd_cols = x[::2,::1]
+  even_rows_odd_cols = x[0::2,1::2]
   #############################################################################
   #                    TODO: Implement this function                          #
   #############################################################################
   # Replace "pass" statement with your code
-  pass
   #############################################################################
   #                            END OF YOUR CODE                               #
   #############################################################################
