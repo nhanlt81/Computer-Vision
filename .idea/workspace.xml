@@ -70,4 +70,10 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
+  <component name="WindowStateProjectService">
+    <state x="305" y="79" width="670" height="676" key="search.everywhere.popup" timestamp="1600885756881">
+      <screen x="0" y="23" width="1280" height="732" />
+    </state>
+    <state x="305" y="79" width="670" height="676" key="search.everywhere.popup/0.23.1280.732@0.23.1280.732" timestamp="1600885756881" />
+  </component>
 </project>

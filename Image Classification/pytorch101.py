@@ -211,7 +211,10 @@ def slice_assignment_practice(x):
   #                    TODO: Implement this function                          #
   #############################################################################
   # Replace "pass" statement with your code
-  pass
+  x[0:2,0:2]=torch.tensor([[0,1],[0,1]])
+  x[0:2,2:] = torch.tensor([[2,2,2,2],[2,2,2,2]])
+  x[2:,0:4] = torch.tensor([[3,4,3,4],[3,4,3,4]])
+  x[2:,4:6] = torch.tensor([[5,5],[5,5]])
   #############################################################################
   #                            END OF YOUR CODE                               #
   #############################################################################
@@ -233,12 +236,12 @@ def shuffle_cols(x):
   - The third column of y is the same as the third column of x
   - The fourth column of y is the same as the second column of x
   """
-  y = None
+  copy = [0,0,2,1]
+  y = x[:,copy]
   #############################################################################
   #                    TODO: Implement this function                          #
   #############################################################################
   # Replace "pass" statement with your code
-  pass
   #############################################################################
   #                            END OF YOUR CODE                               #
   #############################################################################
@@ -259,7 +262,11 @@ def reverse_rows(x):
            reversed; that is the first row of y is equal to the last row of x,
            the second row of y is equal to the second to last row of x, etc.
   """
-  y = None
+  y = torch.zeros(x.shape[0],x.shape[1])
+  reverse_rule = []
+  for i in range(x.shape[0]) :
+    reverse_rule.insert(0,i)
+  y = x[reverse_rule,:]
   #############################################################################
   #                    TODO: Implement this function                          #
   #############################################################################
@@ -286,12 +293,15 @@ def take_one_elem_per_col(x):
   - The second element of y is the first element of the second column of x
   - The third element of y is the fourth element of the third column of x
   """
-  y = None
+  
+  idx0 = torch.arange(x.shape[1])
+  idx1 = torch.tensor([1,0,3])
+  print(x[idx0,idx1])
+  y = x[idx0,idx1]
   #############################################################################
   #                    TODO: Implement this function                          #
   #############################################################################
   # Replace "pass" statement with your code
-  pass
   #############################################################################
   #                            END OF YOUR CODE                               #
   #############################################################################
