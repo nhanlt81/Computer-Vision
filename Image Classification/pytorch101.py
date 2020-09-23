@@ -388,12 +388,11 @@ def reshape_practice(x):
   Returns:
   - y: A reshaped version of x of shape (3, 8) as described above.
   """
-  y = None
+  y = x.view(2,3,4).transpose(1,2).reshape(8,3).t()
   #############################################################################
   #                    TODO: Implement this function                          #
   #############################################################################
   # Replace "pass" statement with your code
-  pass
   #############################################################################
   #                            END OF YOUR CODE                               #
   #############################################################################
@@ -415,7 +414,6 @@ def zero_row_min(x):
     [0, 20, 30],
     [2,  5,  0]
   ])
-
   Your implementation should use reduction and indexing operations; you should
   not use any explicit loops. The input tensor should not be modified.
 
@@ -426,12 +424,15 @@ def zero_row_min(x):
   - y: Tensor of shape (M, N) that is a copy of x, except the minimum value
        along each row is replaced with 0.
   """
-  y = None
+  row_min_vals, row_min_idxs = x.min(dim=1)
+  idx1 = row_min_idxs
+  idx0 = torch.arange(x.shape[0])
+  x[idx0,idx1] = 0
   #############################################################################
   #                    TODO: Implement this function                          #
   #############################################################################
   # Replace "pass" statement with your code
-  pass
+  y = x
   #############################################################################
   #                            END OF YOUR CODE                               #
   #############################################################################

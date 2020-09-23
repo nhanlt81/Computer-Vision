@@ -36,7 +36,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -61,9 +61,9 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="782" y="345" key="SettingsEditor" timestamp="1600888298224">
+    <state x="782" y="345" width="1425" height="831" key="SettingsEditor" timestamp="1600893546476">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="782" y="345" key="SettingsEditor/0.0.2560.1400/-3840.0.2560.1400@0.0.2560.1400" timestamp="1600888298224" />
+    <state x="782" y="345" width="1425" height="831" key="SettingsEditor/0.0.2560.1400/-3840.0.2560.1400@0.0.2560.1400" timestamp="1600893546476" />
   </component>
 </project>
