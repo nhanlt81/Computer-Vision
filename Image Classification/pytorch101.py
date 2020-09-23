@@ -296,8 +296,8 @@ def take_one_elem_per_col(x):
   
   idx0 = torch.arange(x.shape[1])
   idx1 = torch.tensor([1,0,3])
-  print(x[idx0,idx1])
-  y = x[idx0,idx1]
+  
+  y = x[idx1,idx0]
   #############################################################################
   #                    TODO: Implement this function                          #
   #############################################################################
@@ -323,6 +323,9 @@ def count_negative_entries(x):
   - num_neg: Integer giving the number of negative values in x
   """
   num_neg = 0
+  mask = (x < 0)
+  x = x[mask]
+  num_neg = x.shape[0]
   #############################################################################
   #                    TODO: Implement this function                          #
   #############################################################################
